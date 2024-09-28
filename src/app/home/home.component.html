@@ -1,22 +1,21 @@
-<ul>
-    <span> 
-        <li>product_name</li>
-        <li>category</li>
-        <li>quantity</li>
-        <li>price</li>
-    </span>
-    <span> 
-        <li>product_name</li>
-        <li>category</li>
-        <li>quantity</li>
-        <li>price</li>
-    </span>
-    <span> 
-        <li>product_name</li>
-        <li>category</li>
-        <li>quantity</li>
-        <li>price</li>
-    </span>
+<app-header/>
+
+
+
+    <ul>
+        <li *ngFor="let product of products">
+            <span>{{ product.name }}</span>
+            <span>{{ product.category }}</span>
+            <span>{{ product.quantity }}</span>
+            <span>{{ product.price | currency }}</span>
+        </li>
+    </ul>
+    <p>
+            <button appButton>
+            Kosárba helyezés
+            <span ngProjectAs="icon" >⌲</span>
+            </button>
+    </p>
        
    
-</ul>
+

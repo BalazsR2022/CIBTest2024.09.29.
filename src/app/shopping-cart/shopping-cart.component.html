@@ -3,6 +3,18 @@
     <li>quantity</li>
     <li>price</li>
     <li>total</li>
-    <button>Delete</button>
-    <button>Tovább a szállítási adatok megadására</button>
+    
+    <p>
+        <button appButton>
+         Törlés
+          <span ngProjectAs="icon" >X</span>
+        </button>
+    </p>
+   
+    <p>
+      <button [routerLink]="['/addresses']" routerLinkActive="router-link-active">
+        Tovább a szállítási adatok megadására
+        <span ngProjectAs="icon">⌲</span>
+      </button>
+    </p>
 </ul>

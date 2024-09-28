@@ -1,3 +1,9 @@
 <p>Szállítási adatok</p>
 <p>Számlázási adatok</p>
-<button>Tovább a megrendelés befejezése oldalra!</button>
+
+<p>
+  <button [routerLink]="['/orders']" routerLinkActive="router-link-active">
+    Tovább a megrendelés befejezése oldalra
+    <span ngProjectAs="icon">⌲</span>
+  </button>
+</p>

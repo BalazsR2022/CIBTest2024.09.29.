@@ -1,12 +1,17 @@
 
 <header>
-    <div class="user-icon">
+    <div class="user-icon" [routerLink]="['/user-manager']" routerLinkActive="router-link-active">
         👤
       </div>
-    <div class="cart-container">
+    <div class="cart-container" [routerLink]="['/orders']" routerLinkActive="router-link-active">
         🛒
+        <span>
+          2
+        </span>
         <!-- <span class="item-count">{{ itemCount }}</span> -->
       </div>
 </header>
+
+
 
 
