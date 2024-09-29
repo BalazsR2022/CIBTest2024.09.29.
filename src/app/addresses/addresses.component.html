@@ -1,9 +1,168 @@
-<p>Szállítási adatok</p>
-<p>Számlázási adatok</p>
+<!-- <div class="form">
+  <h1>Számlázási adatok</h1>
+  <ul>
+    <li>
+      <label for="billing-zip">Irányítószám</label>
+      <input id="billing-zip" type="text" />
+    </li>
+    <li>
+      <label for="billing-city">Város</label>
+      <input id="billing-city" type="text" />
+    </li>
+    <li>
+      <label for="billing-street">Utca</label>
+      <input id="billing-street" type="text" />
+    </li>
+    <li>
+      <label for="billing-house-number">Házszám</label>
+      <input id="billing-house-number" type="text" />
+    </li>
+    <li>
+      <label for="billing-stairs">Lépcsőház</label>
+      <input id="billing-stairs" type="text" />
+    </li>
+    <li>
+      <label for="billing-flat">Lakcím</label>
+      <input id="billing-flat" type="text" />
+    </li>
+    <li>
+      <label for="billing-door">Ajtó</label>
+      <input id="billing-door" type="text" />
+    </li>
+  </ul>
 
-<p>
-  <button [routerLink]="['/orders']" routerLinkActive="router-link-active">
-    Tovább a megrendelés befejezése oldalra
-    <span ngProjectAs="icon">⌲</span>
+  <h1>Szállítási adatok</h1>
+  <ul>
+    <li>
+      <label for="shipping-zip">Irányítószám</label>
+      <input id="shipping-zip" type="text" />
+    </li>
+    <li>
+      <label for="shipping-city">Város</label>
+      <input id="shipping-city" type="text" />
+    </li>
+    <li>
+      <label for="shipping-street">Utca</label>
+      <input id="shipping-street" type="text" />
+    </li>
+    <li>
+      <label for="shipping-house-number">Házszám</label>
+      <input id="shipping-house-number" type="text" />
+    </li>
+    <li>
+      <label for="shipping-stairs">Lépcsőház</label>
+      <input id="shipping-stairs" type="text" />
+    </li>
+    <li>
+      <label for="shipping-flat">Lakcím</label>
+      <input id="shipping-flat" type="text" />
+    </li>
+    <li>
+      <label for="shipping-door">Ajtó</label>
+      <input id="shipping-door" type="text" />
+    </li>
+  </ul>
+  <p>
+  <button appButton>
+    Módosít
+    <span ngProjectAs="icon" >⌲</span>
   </button>
 </p>
+
+<p>
+    <button [routerLink]="['/orders']" routerLinkActive="router-link-active">
+      Tovább a megrendelés befejezése oldalra
+      <span ngProjectAs="icon">⌲</span>
+    </button>
+  </p>
+</div> -->
+<div class="form">
+  <h1>Számlázási adatok</h1>
+  <ul>
+    <li>
+      <label for="billing-zip">Irányítószám</label>
+      <input id="billing-zip" type="text" />
+    </li>
+    <li>
+      <label for="billing-city">Város</label>
+      <input id="billing-city" type="text" />
+    </li>
+    <li>
+      <label for="billing-street">Utca</label>
+      <input id="billing-street" type="text" />
+    </li>
+    <li>
+      <label for="billing-house-number">Házszám</label>
+      <input id="billing-house-number" type="text" />
+    </li>
+    <li>
+      <label for="billing-stairs">Lépcsőház</label>
+      <input id="billing-stairs" type="text" />
+    </li>
+    <li>
+      <label for="billing-flat">Lakcím</label>
+      <input id="billing-flat" type="text" />
+    </li>
+    <li>
+      <label for="billing-door">Ajtó</label>
+      <input id="billing-door" type="text" />
+    </li>
+  </ul>
+
+  <h1>Szállítási adatok</h1>
+  <ul>
+    <li>
+      <label for="shipping-zip">Irányítószám</label>
+      <input id="shipping-zip" type="text" />
+    </li>
+    <li>
+      <label for="shipping-city">Város</label>
+      <input id="shipping-city" type="text" />
+    </li>
+    <li>
+      <label for="shipping-street">Utca</label>
+      <input id="shipping-street" type="text" />
+    </li>
+    <li>
+      <label for="shipping-house-number">Házszám</label>
+      <input id="shipping-house-number" type="text" />
+    </li>
+    <li>
+      <label for="shipping-stairs">Lépcsőház</label>
+      <input id="shipping-stairs" type="text" />
+    </li>
+    <li>
+      <label for="shipping-flat">Lakcím</label>
+      <input id="shipping-flat" type="text" />
+    </li>
+    <li>
+      <label for="shipping-door">Ajtó</label>
+      <input id="shipping-door" type="text" />
+    </li>
+  </ul>
+
+  <h2>Mentett Címek</h2>
+  <ul>
+    <li *ngFor="let address of addresses">
+      <strong>{{ address.street }} {{ address.houseNumber }}</strong><br>
+      {{ address.zipCode }}, {{ address.city }}<br>
+      <span *ngIf="address.stairs">Lépcsőház: {{ address.stairs }}</span><br>
+      <span *ngIf="address.flat">Lakás: {{ address.flat }}</span><br>
+      <span *ngIf="address.door">Ajtó: {{ address.door }}</span>
+    </li>
+  </ul>
+
+  <p>
+    <button appButton>
+      Módosít
+      <span ngProjectAs="icon">⌲</span>
+    </button>
+  </p>
+
+  <p>
+    <button [routerLink]="['/orders']" routerLinkActive="router-link-active">
+      Tovább a megrendelés befejezése oldalra
+      <span ngProjectAs="icon">⌲</span>
+    </button>
+  </p>
+</div>

@@ -9,6 +9,7 @@ import { ShoppingCartComponent } from './app/shopping-cart/shopping-cart.compone
 import { AddressesComponent } from './app/addresses/addresses.component';
 import { OrdersComponent } from './app/orders/orders.component';
 import { ButtonComponent } from './app/shared/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -16,11 +17,14 @@ const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'user-manager', component: UserManagerComponent },
-  { path: '', component: HomeComponent },  
+  { path: '', component: HomeComponent }, 
+  {path: 'button', component: ButtonComponent },
+  {path: 'header', component: HeaderComponent} 
 ];
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
+     HttpClientModule 
   ],
 }).catch(err => console.error(err));

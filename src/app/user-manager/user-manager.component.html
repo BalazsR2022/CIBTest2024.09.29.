@@ -1,21 +1,39 @@
 <span>
-    <ul>
-    <!-- <ul> kettős kötés -->
-        <li>Last_name</li>
-        
-        <li>First_name</li>
-        
-        <li>UserName</li>
-        
-        <li>Billing_address</li>
 
-        <li>Delivery_Address</li>
+<div class="form">
+  <h2>Felhasználók</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Vezetéknév</th>
+        <th>Keresztnév</th>
+        <th>Felhasználónév</th>
+        <th>E-mail</th>
+        <th>Műveletek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td><input [(ngModel)]="user.lastName" /></td>
+        <td><input [(ngModel)]="user.firstName" /></td>
+        <td><input [(ngModel)]="user.username" /></td>
+        <td><input [(ngModel)]="user.email" /></td>
+        <td>
+          <button appButton>
+            Módosít
+            <span ngProjectAs="icon" >⌲</span>
+          </button>
+          <!-- <button (click)="updateUser(user)">Módosít</button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-        <p>
-            <button appButton>
-              Módosít
-              <span ngProjectAs="icon" >⌲</span>
-            </button>
-        </p>
-       </ul>
+       
+<app-addresses></app-addresses>
+
+       
 </span>

@@ -63,13 +63,13 @@ nav ul {
     font-size: 1rem;
     text-align: center;
     cursor: pointer;
-    background-color: #691ebe;
+    background-color: #57426f;
     color: white;
     border: none;
   }
   
   button:hover {
-    background-color: #551b98;
+    background-color: #887999;
   }
   .icon {
     display: inline-block;
@@ -96,4 +96,33 @@ nav ul {
     font: inherit;
     font-size: 0.9rem;
     color: #4f4b53;
+    }
+
+    .form {
+      max-width: 600px; 
+      margin: 20px auto; 
+      padding: 20px; 
+      border: 1px solid #ccc; 
+      border-radius: 8px; 
+      background-color: #f9f9f9; 
+    }
+    
+    .form h1 {
+      font-size: 24px; 
+      margin-bottom: 15px; 
+    }
+    
+    .form ul {
+      list-style-type: none; 
+      padding: 0; 
+    }
+    
+    .form li {
+      margin-bottom: 10px; 
+    }
+    
+    .form label {
+      display: block; 
+      margin-bottom: 5px; 
+      font-weight: bold; 
     }
